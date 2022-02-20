@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPB1WordPressAPI", "SAPB1WordPressAPI\SAPB1WordPressAPI.csproj", "{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF5C2D92-ED53-47CF-8B41-F771A81C9B58}
+	EndGlobalSection
+EndGlobal
