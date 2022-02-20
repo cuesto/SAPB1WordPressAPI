@@ -7,6 +7,11 @@ namespace SAPB1WordPressAPI.DataModel.DAL
 {
     public class SapDbContext : DbContext
     {
+        public SapDbContext(DbContextOptions<SapDbContext> options) : base(options)
+        {
+
+        }
+
         public virtual DbSet<OCRD> OCRD { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -14,7 +19,7 @@ namespace SAPB1WordPressAPI.DataModel.DAL
 
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
-                //modelBuilder.Entity(entityType.ClrType).ToTable(entityType.ClrType.Name);
+                modelBuilder.Entity(entityType.ClrType).ToTable(entityType.ClrType.Name);
 
                 entityType.GetForeignKeys()
                     .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade)
