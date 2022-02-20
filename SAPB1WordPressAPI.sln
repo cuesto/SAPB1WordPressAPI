@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPB1WordPressAPI", "SAPB1WordPressAPI\SAPB1WordPressAPI.csproj", "{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPB1WordPressAPI.DataModel", "SAPB1WordPressAPI.DataModel\SAPB1WordPressAPI.DataModel.csproj", "{2995875D-8018-4A53-8773-1A595E4B0F81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37A07FB7-2B1A-4F33-9018-00F5963DBAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2995875D-8018-4A53-8773-1A595E4B0F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2995875D-8018-4A53-8773-1A595E4B0F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2995875D-8018-4A53-8773-1A595E4B0F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2995875D-8018-4A53-8773-1A595E4B0F81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
