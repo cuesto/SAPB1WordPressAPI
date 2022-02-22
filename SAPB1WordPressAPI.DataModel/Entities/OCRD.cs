@@ -13,21 +13,17 @@ namespace SAPB1WordPressAPI.DataModel.Entities
         [StringLength(100)]
         public string CardName { get; set; }
 
-        [JsonIgnore]
-        public char CardType { get; set; }
-
-        [JsonIgnore]
-        public char frozenFor { get; set; }
-
-        [NotMapped]
-        public string DisplayAutoComplete
-        {
-            get
-            {
-                if (CardCode == null)
-                    return "";
-                return $"{CardCode} - {CardName}";
-            }
-        }
+        public decimal? CreditLine { get; set; } 
+       
+        //[NotMapped]
+        //public string DisplayAutoComplete
+        //{
+        //    get
+        //    {
+        //        if (CardCode == null)
+        //            return "";
+        //        return $"{CardCode} - {CardName}";
+        //    }
+        //}
     }
 }
