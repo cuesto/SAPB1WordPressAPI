@@ -30,7 +30,7 @@ namespace SAPB1WordPressAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SapDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("iberica")));
+                    options.UseSqlServer(Configuration.GetConnectionString("sapbd")));
 
             services.AddControllers();
             AddSwagger(services);
@@ -44,14 +44,14 @@ namespace SAPB1WordPressAPI
 
                 options.SwaggerDoc(groupName, new OpenApiInfo
                 {
-                    Title = $"Foo {groupName}",
+                    Title = $"SAP Business One {groupName}",
                     Version = groupName,
-                    Description = "Foo API",
+                    Description = "SAP Business One API",
                     Contact = new OpenApiContact
                     {
-                        Name = "Foo Company",
-                        Email = string.Empty,
-                        Url = new Uri("https://foo.com/"),
+                        Name = "InfoSocial",
+                        Email = "34cuesto@gmail.com"//,
+                        //Url = new Uri("https://foo.com/"),
                     }
                 });
             });
@@ -70,7 +70,7 @@ namespace SAPB1WordPressAPI
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Foo API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SAP Business One API V1");
             });
 
             app.UseRouting();
