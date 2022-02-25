@@ -37,8 +37,10 @@ namespace SAPB1WordPressAPI.Web.Controllers
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GenerateCustomerStatement(string cardCode, DateTime startDate, DateTime endDate)
+        public async Task<IActionResult> GenerateCustomerStatement(/*string cardCode , DateTime startDate, DateTime endDate*/)
         {
+            //var details = await this.sapDbContext.GetCustomerStatementAsync(cardCode, startDate, endDate);
+
             await new BrowserFetcher().DownloadAsync(BrowserFetcher.DefaultRevision);
             await using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
             {
@@ -52,8 +54,6 @@ namespace SAPB1WordPressAPI.Web.Controllers
                 Format = PaperFormat.A4,
                 PrintBackground = true
             });
-
-            var details = await this.sapDbContext.GetCustomerStatementAsync(cardCode, startDate,endDate);
 
             return File(pdfContent, "application/pdf", "converted.pdf");
         }

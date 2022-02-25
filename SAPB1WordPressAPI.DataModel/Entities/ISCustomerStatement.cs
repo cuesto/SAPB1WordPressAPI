@@ -16,7 +16,7 @@ namespace SAPB1WordPressAPI.DataModel.Entities
         public DateTime InvoicePostingDate { get; set; }
 
         [Display(Name = "Inv Document Number")]
-        public string InvDocumentNumber { get; set; }
+        public int InvDocumentNumber { get; set; }
 
         [Display(Name = "Customer Code")]
         public string CustomerCode { get; set; }
@@ -31,10 +31,10 @@ namespace SAPB1WordPressAPI.DataModel.Entities
         public decimal? DocTotal { get; set; }
 
         [Display(Name = "Paid To Invoice")]
-        public string PaidToInvoice { get; set; }
+        public decimal? PaidToInvoice { get; set; }
 
         [Display(Name = "Payment Document Number")]
-        public string PaymentDocumentNumber { get; set; }
+        public int PaymentDocumentNumber { get; set; }
 
         [Display(Name = "Payment Posting Date")]
         [DataType(DataType.Date)]

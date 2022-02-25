@@ -61,7 +61,7 @@ namespace SAPB1WordPressAPI.DataModel.DAL
                 string sqlQuery = "EXEC [dbo].[ISCustomerStatement] " +
                                     "@cardcode, @startdate, @enddate";
 
-                lst = await this.Query<ISCustomerStatement>().FromSqlRaw(sqlQuery, cardCodeParam,startdate,enddate).ToListAsync();
+                lst = await this.Query<ISCustomerStatement>().FromSqlRaw(sqlQuery, cardCodeParam, startDateParam, endDateParam).ToListAsync();
             }
             catch (Exception ex)
             {
