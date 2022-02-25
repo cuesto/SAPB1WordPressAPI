@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/SAPB1WordPressAPI/.local-chromium/Win64-901912/chrome-win
