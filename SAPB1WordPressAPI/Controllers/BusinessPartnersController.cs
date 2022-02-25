@@ -4,6 +4,7 @@ using PuppeteerSharp;
 using PuppeteerSharp.Media;
 using SAPB1WordPressAPI.DataModel.DAL;
 using SAPB1WordPressAPI.DataModel.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,8 +36,8 @@ namespace SAPB1WordPressAPI.Web.Controllers
             return sapDbContext.OCRD.AsNoTracking().Where(x => x.CardCode == cardCode).FirstOrDefault();
         }
 
-        [HttpGet("[action]/cardCode")]
-        public async Task<IActionResult> GenerateCustomerStatement(string cardCode)
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GenerateCustomerStatement(string cardCode, DateTime startDate, DateTime endDate)
         {
             await new BrowserFetcher().DownloadAsync(BrowserFetcher.DefaultRevision);
             await using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
@@ -51,6 +52,9 @@ namespace SAPB1WordPressAPI.Web.Controllers
                 Format = PaperFormat.A4,
                 PrintBackground = true
             });
+
+            var details = await this.sapDbContext.GetCustomerStatementAsync(cardCode, startDate,endDate);
+
             return File(pdfContent, "application/pdf", "converted.pdf");
         }
     }
