@@ -65,7 +65,7 @@ namespace SAPB1WordPressAPI.DataModel.DAL
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new InvalidOperationException(ex.Message);
             }
 
             // Info.  
